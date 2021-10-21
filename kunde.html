@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="DA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="UdstyrCSS.css" />
+    <title>Solbiler | Udstyr</title>
+
+    
+</head>
+
+<body>
+    <header>
+        <h1>Solbiler ApS</h1>
+        <nav>
+          <a href="#" class="login">Log ind</a>
+        </nav>
+      </header>
+    <div class="CenterBox"></div>
+    <div class="BannerBillede"></div>
+    <div class="UdstyrContainer">
+
+        <div class="YourChoiceLeft">
+            Du har valgt:<br /><br />
+            bil: <div id="rental-car"></div><br />
+            antal dage:<div id="rental-days"></div><br />
+            
+            Billeje i alt: <div id="rental-price"></div> inkl. moms
+
+        </div>
+
+        <div class="YourChoiceRight">
+
+            <div class="ChooseExtra"><p>Vælg ekstraudstyr:<br /><br />ekskl. moms</p></div>
+
+
+            <div class="CheckboxesContainer">
+                <form>
+                    <div class="LeftCheckboxes">
+                        
+                            <label for="ExtraChaufor"><input id="ExtraChaufor" value="199" type="checkbox" name="Udstyr"> 
+                                Ekstra chauffør kr. 199,00</label><br />
+                            <label for="Barnesaede5Plus"><input id="Barnesaede5Plus" value="155" type="checkbox" name="Udstyr"> 
+                                Barnesæde (5-12 år) kr. 155,00</label><br />
+                            <label for="Barnesaede1Plus"><input id="Barnesaede1Plus" value="140"  type="checkbox" name="Udstyr"> 
+                                Barnesæde (1-4 år) kr. 140,00</label><br />
+                            <label for="LiftNet"><input id="LiftNet" type="checkbox" value="120" name="Udstyr"> 
+                                Lift-net (0-1 år) kr. 120,00</label><br />
+                        
+                    </div>
+
+                    <div class="RightCheckboxes">
+                        
+                            <label for="GPSnav"><input id="GPSnav" type="checkbox" value="250" name="Udstyr"> 
+                                GPS Navigation kr. 250,00</label><br />
+                            <label for="ExtraChaufor"><input id="ExtraChaufor" value="199" type="checkbox" name="Udstyr"> 
+                                Ekstra chauffør kr. 199,00</label><br />
+                            <label for="Snekaeder"><input id="Snekaeder" value="188" type="checkbox" name="Udstyr"> 
+                                Snekæder kr. 188,00</label><br />
+                            <label for="RoadHelp"><input id="RoadHelp" value="120" type="checkbox" name="Udstyr"> 
+                                Vejhjælp+ kr. 120,00</label><br />
+                    </div>
+                </form>
+            </div>
+
+            <div class="Resultat">
+                <div class="ialtPris"><p>Pris i alt inkl. ektraudstyr:</p><div id="ialt"></div> kr. inkl. moms </div>
+                <div class="VidereUdstyr"><button type="submit">Videre ></button></div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <footer class="Footer">© 2021 Solbiler ApS</footer>
+  
+    <script>
+        const url = new URL(window.location.href);
+        document.getElementById("rental-car").innerText = url.searchParams.get("car")
+        document.getElementById("rental-days").innerText = url.searchParams.get("days")
+        document.getElementById("rental-price").innerText = url.searchParams.get("price")
+
+        const form = document.querySelector("form");
+        const ialt = document.getElementById("ialt");
+
+
+        form.addEventListener("change", function()
+        {
+            let pris = 0 + Number(document.getElementById("rental-price").innerText = url.searchParams.get("price")) ;
+            for (const Udstyr of form.elements.Udstyr)
+            {
+                if (Udstyr.checked === true)
+                {
+                    pris += Number(Udstyr.value);
+                }
+            }
+
+            ialt.innerText = pris;
+        });
+    </script>
+</body>
+
+</html>

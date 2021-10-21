@@ -1,0 +1,105 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-color:white
+}
+section
+{
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    right: -100%;
+    bottom: 0px;
+    overflow: hidden;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+.Icons
+{
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    right: -100%;
+    bottom: 0px;
+    z-index: 1;
+}
+#Z1
+{
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    right: -100%;
+    bottom: 0px;
+    z-index: 4;
+    background-repeat: repeat-x;
+    background-image: url(/1x/Asset\ 1.png);
+    background-size: contain;
+}
+#Z2
+{
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    right: -100%;
+    bottom: 0px;
+    z-index: 3;
+    background-repeat: repeat-x;
+    background-image: url(/1x/Artboard\ 2.png);
+    background-size: contain;
+}
+#Z3
+{
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    right: -100%;
+    bottom: 0px;
+    z-index: 2;
+    background-repeat: repeat-x;
+    background-image: url(/1x/Artboard\ 1.png);
+    background-size: contain;
+}
+#Z4
+{
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    right: -100%;
+    bottom: 0px;
+    z-index: 1;
+    background-repeat: repeat-x;
+    background-image: url(/1x/Artboard\ 3.png);
+    background-size: contain;
+}
+
+.Solbil
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

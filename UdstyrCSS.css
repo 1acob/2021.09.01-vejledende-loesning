@@ -1,0 +1,74 @@
+
+.BannerBillede
+{
+    width: 90%;
+    height: 100px;
+    background-color: green;
+    margin:  0px auto 10px auto;
+}
+
+.UdstyrContainer
+{
+    width: 90%;
+    min-height: 300px;
+    clear: both;
+    margin: auto;
+}
+
+.YourChoiceLeft
+{
+    width: 30%;
+    min-height: 300px;
+    background-color: grey;
+    padding: 10px;
+    float: left;
+}
+.YourChoiceRight
+{
+    width: 60%;
+    min-height:300px;
+    background-color: Darkgray;
+    padding: 10px;
+    float: right;
+}
+
+.CheckboxesContainer
+{
+    width: 100%;
+    min-height: 100px;
+    clear:both; 
+}
+.LeftCheckboxes
+{
+    width: 50%;
+    min-height: 100px;
+    float: left;
+}
+.RightCheckboxes
+{
+    width: 50%;
+    min-height: 100px;
+    float: right;
+}
+
+
+.Footer
+{
+    width: 100%;
+    height: 50px;
+    align-content: center;
+}
+
+.VidereUdstyr
+{
+    float: right;
+
+}
+
+.Resultat
+{
+    width: 100%;
+    min-height: 50px;
+    float: left;
+    clear:both; 
+}
