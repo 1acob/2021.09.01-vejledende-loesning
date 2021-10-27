@@ -241,6 +241,20 @@ searchButton.addEventListener("click", handleSearch);
 
 
 
+sessionStorage.setItem("cars", url.searchParams.get("car"));
+sessionStorage.setItem("days", url.searchParams.get("days"));
+sessionStorage.setItem("price", url.searchParams.get("price"));
+sessionStorage.setItem("dateFrom", url.searchParams.get("dateFrom"));
+sessionStorage.setItem("dateTo", url.searchParams.get("dateTo"));
+
+sessionStorage.setItem("rental-price", url.searchParams.get("rental-price"));
+sessionStorage.setItem("rental-days", url.searchParams.get("rental-days"));
+sessionStorage.setItem("rental-car", url.searchParams.get("rental-car"));
+sessionStorage.setItem("dateFrom", url.searchParams.get("dateFrom"));
+sessionStorage.setItem("dateTo", url.searchParams.get("dateTo"));
+
+
+
 
 
 
