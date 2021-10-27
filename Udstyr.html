@@ -22,7 +22,7 @@
     <div class="CenterBox"></div>
     <div class="BannerBillede"></div>
     <div class="UdstyrContainer">
-        <form>
+        <form action="kunde.html">
             <div class="YourChoiceLeft">
                 Du har valgt:<br /><br />
                 bil: <div id="rental-car"></div><br />
@@ -68,7 +68,7 @@
 
                 <div class="Resultat">
                     <div class="ialtPris"><p>Pris i alt inkl. ektraudstyr:</p><div id="ialt"></div> kr. inkl. moms </div>
-                    <div class="VidereUdstyr"><button>Videre ></button></div>
+                    <div class="VidereUdstyr"><button type="submit">Videre ></button></div>
                 </div>
 
             </div>
@@ -103,6 +103,38 @@
 
             ialt.innerText = pris;
         });
+
+        //TODO: Save data when is submitted to
+        form.addEventListener("submit", function(event)
+        {
+            //Beregn pris for det valgte ektraudstyr
+            let extraPrice = 0;
+            let extraList = [];
+            for (const item of this.elements.Udstyr)
+            {
+                if (item.checked === true)
+                {
+                    const numericValue = Number(item.value);
+                    extraPrice += addVat(numericValue);
+                    extraList.push(item.parentNode)
+
+                }
+
+            }
+
+            sessionStorage.setItem("extraPrice", extraPrice);
+            sessionStorage.setItem("extrasList", extrasList.join(", "))
+
+            sessionStorage.setItem("car", url.searchParams.get("car"));
+            sessionStorage.setItem("days", url.searchParams.get("days"));
+            sessionStorage.setItem("dateFrom", url.searchParams.get("dateFrom"));
+            sessionStorage.setItem("dateTo", url.searchParams.get("dateTo"));
+            sessionStorage.setItem("rental-Price", url.searchParams.get("rental-Price"));
+
+        });
+    
+
+    
     </script>
 </body>
 
