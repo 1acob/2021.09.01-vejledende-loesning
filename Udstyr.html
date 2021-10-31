@@ -80,62 +80,7 @@
 
     <footer class="Footer">© 2021 Solbiler ApS</footer>
   
-    <script>
-        const url = new URL(window.location.href);
-        document.getElementById("rental-car").innerText = url.searchParams.get("car")
-        document.getElementById("rental-days").innerText = url.searchParams.get("days")
-        document.getElementById("rental-price").innerText = url.searchParams.get("price")
-
-        const form = document.querySelector("form");
-        const ialt = document.getElementById("ialt");
-
-
-        form.addEventListener("change", function()
-        {
-            let pris = 0 + Number(document.getElementById("rental-price").innerText = url.searchParams.get("price")) ;
-            for (const Udstyr of form.elements.Udstyr)
-            {
-                if (Udstyr.checked === true)
-                {
-                    pris += Number(Udstyr.value);
-                }
-            }
-
-            ialt.innerText = pris;
-        });
-
-        //TODO: Save data when is submitted to
-        form.addEventListener("submit", function(event)
-        {
-            //Beregn pris for det valgte ektraudstyr
-            let extraPrice = 0;
-            let extraList = [];
-            for (const item of this.elements.Udstyr)
-            {
-                if (item.checked === true)
-                {
-                    const numericValue = Number(item.value);
-                    extraPrice += addVat(numericValue);
-                    extraList.push(item.parentNode)
-
-                }
-
-            }
-
-            sessionStorage.setItem("extraPrice", extraPrice);
-            sessionStorage.setItem("extrasList", extrasList.join(", "))
-
-            sessionStorage.setItem("car", url.searchParams.get("car"));
-            sessionStorage.setItem("days", url.searchParams.get("days"));
-            sessionStorage.setItem("dateFrom", url.searchParams.get("dateFrom"));
-            sessionStorage.setItem("dateTo", url.searchParams.get("dateTo"));
-            sessionStorage.setItem("rental-Price", url.searchParams.get("rental-Price"));
-
-        });
-    
-
-    
-    </script>
+    <script src="Udstyr.js"></script>
 </body>
 
 </html>
