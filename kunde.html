@@ -19,38 +19,24 @@
           <a href="#" class="login">Log ind</a>
         </nav>
       </header>
-    <div class="CenterBox">
-        Her er din kvittering.
+    <div class="KvitteringsBox">
+        <div class="KvitteringsHeader"><b>Her er din kvittering.</b></div>
+        <br />
+        <div class="KvitteringsHeader">Extra udstyr: <div id="extraPrice"></div></div>
+        <div class="KvitteringsHeader">Bil:<div id="car"></div></div>
+        <div class="KvitteringsHeader">Antal dage:<div id="days"></div></div>
+        <div class="KvitteringsHeader">God tur :)</div>
 
-
+    </div>
     </div>
 
 
     <footer class="Footer">© 2021 Solbiler ApS</footer>
   
     <script>
-        const url = new URL(window.location.href);
-        document.getElementById("rental-car").innerText = url.searchParams.get("car")
-        document.getElementById("rental-days").innerText = url.searchParams.get("days")
-        document.getElementById("rental-price").innerText = url.searchParams.get("price")
-
-        const form = document.querySelector("form");
-        const ialt = document.getElementById("ialt");
-
-
-        form.addEventListener("change", function()
-        {
-            let pris = 0 + Number(document.getElementById("rental-price").innerText = url.searchParams.get("price")) ;
-            for (const Udstyr of form.elements.Udstyr)
-            {
-                if (Udstyr.checked === true)
-                {
-                    pris += Number(Udstyr.value);
-                }
-            }
-
-            ialt.innerText = pris;
-        });
+        document.getElementById("extraPrice").innerText = sessionStorage.getItem("extraPrice");
+        document.getElementById("car").innerText = sessionStorage.getItem("car");
+        document.getElementById("days").innerText = sessionStorage.getItem("days");
     </script>
 </body>
 

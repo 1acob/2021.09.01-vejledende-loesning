@@ -278,3 +278,25 @@ video
   width: 600px;
   height: 400px;
 }
+
+
+
+.KvitteringsBox
+{
+  width: 200px;
+  height: 400px;
+  background-color: bisque;
+  border-radius: 10px;
+  margin: auto auto;
+
+}
+.KvitteringsHeader
+{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content:center;
+  width: 100%;
+  min-height:10px;
+  padding-top: 10px;
+}

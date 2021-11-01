@@ -79,6 +79,18 @@ section
     background-image: url(/1x/Artboard\ 3.png);
     background-size: contain;
 }
+#Z5
+{
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    right: -110%;
+    bottom: 0px;
+    z-index: 5;
+    background-repeat: repeat-x;
+    background-image: url(/1x/OmOsInfo.png);
+    background-size: contain;
+}
 
 .Solbil
 {
@@ -87,7 +99,6 @@ section
     left: 0px;
     z-index: 5;
 }
-
 
 
 
