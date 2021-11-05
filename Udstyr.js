@@ -14,7 +14,7 @@ function formatPrice(price = 0)
     });
 }
 
-const basePrice = Number(url.searchParams.get("rentalPrice"));
+const basePrice = Number(url.searchParams.get("rental-Price"));
 const formattedBasePrice = formatPrice(basePrice);
 
 // Set values from URL parameters
@@ -58,7 +58,6 @@ form.addEventListener("submit", function(event)
         }
 
     }
-
     sessionStorage.setItem("extraPrice", extraPrice);
     sessionStorage.setItem("extrasList", extraList.join(", "))
 
@@ -67,7 +66,8 @@ form.addEventListener("submit", function(event)
     sessionStorage.setItem("dateFrom", url.searchParams.get("dateFrom"));
     sessionStorage.setItem("dateTo", url.searchParams.get("dateTo"));
     sessionStorage.setItem("rental-Price", url.searchParams.get("price"));
-
+    
+ 
 });
 
 

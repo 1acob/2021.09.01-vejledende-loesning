@@ -25,9 +25,10 @@
         <div class="KvitteringsHeader">Extra udstyr: <div id="extraPrice"></div></div>
         <div class="KvitteringsHeader">Bil:<div id="car"></div></div>
         <div class="KvitteringsHeader">Antal dage:<div id="days"></div></div>
+        <div class="KvitteringsHeader">Bilens pris:<div id="rental-Price"></div></div>
         <div class="KvitteringsHeader">God tur :)</div>
         <br /><br /><br /><br /><br />
-        <div class="KvitteringsHeader">Samlet pris</div>
+        <!-- <div class="KvitteringsHeader">Samlet pris:<div id="SamletPris"></div></div> -->
 
     </div>
     </div>
@@ -39,6 +40,8 @@
         document.getElementById("extraPrice").innerText = sessionStorage.getItem("extraPrice");
         document.getElementById("car").innerText = sessionStorage.getItem("car");
         document.getElementById("days").innerText = sessionStorage.getItem("days");
+        document.getElementById("rental-Price").innerText = sessionStorage.getItem("rental-Price");
+        document.getElementById("SamletPris").innerText = sessionStorage.getItem("rental-Price"+"extraPrice");
     </script>
 </body>
 
