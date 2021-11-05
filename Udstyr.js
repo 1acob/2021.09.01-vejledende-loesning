@@ -33,7 +33,7 @@ form.addEventListener("change", function()
     {
         if (Udstyr.checked === true)
         {
-          const numbericValue = Number(Udstyr.value);
+          const numericValue = Number(Udstyr.value);
           extraPris += addVat(numericValue);
         }
     }
@@ -53,7 +53,7 @@ form.addEventListener("submit", function(event)
         {
             const numericValue = Number(item.value);
             extraPrice += addVat(numericValue);
-            extraList.push(item.parentNode)
+            extraList.push(item.parentNode.innerText)
 
         }
 
@@ -66,7 +66,7 @@ form.addEventListener("submit", function(event)
     sessionStorage.setItem("days", url.searchParams.get("days"));
     sessionStorage.setItem("dateFrom", url.searchParams.get("dateFrom"));
     sessionStorage.setItem("dateTo", url.searchParams.get("dateTo"));
-    sessionStorage.setItem("rental-Price", url.searchParams.get("rental-Price"));
+    sessionStorage.setItem("rental-Price", url.searchParams.get("price"));
 
 });
 
